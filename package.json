@@ -1,0 +1,38 @@
+{
+    "name": "@wocker/docker-mock-module",
+    "type": "commonjs",
+    "version": "0.0.1",
+    "author": "Kris Papercut <krispcut@gmail.com>",
+    "description": "Docker mock module for wocker",
+    "license": "MIT",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "keywords": [
+        "wocker"
+    ],
+    "scripts": {
+        "prepublishOnly": "npm run build",
+        "build": "tsc --project tsconfig.build.json",
+        "watch": "tsc -w --project tsconfig.build.json",
+        "test": "jest --colors",
+        "test-watch": "jest --colors --watchAll --coverage",
+        "make-coverage-badge": "make-coverage-badge"
+    },
+    "peerDependencies": {
+        "@wocker/core": "^1.0.26",
+        "@wocker/docker-module": "^0.0.1"
+    },
+    "devDependencies": {
+        "@types/docker-modem": "^3.0.6",
+        "@types/dockerode": "^3.3.44",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.8.1",
+        "@wocker/core": "^1.0.26",
+        "@wocker/docker-module": "^0.0.1",
+        "jest": "^30.2.0",
+        "make-coverage-badge": "^1.2.0",
+        "ts-jest": "^29.4.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    }
+}
