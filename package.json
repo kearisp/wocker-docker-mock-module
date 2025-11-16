@@ -19,7 +19,7 @@
         "make-coverage-badge": "make-coverage-badge"
     },
     "peerDependencies": {
-        "@wocker/core": "^1.0.26",
+        "@wocker/core": "^1.0.27",
         "@wocker/docker-module": "^0.0.1"
     },
     "devDependencies": {
@@ -27,7 +27,7 @@
         "@types/dockerode": "^3.3.44",
         "@types/jest": "^30.0.0",
         "@types/node": "^24.8.1",
-        "@wocker/core": "^1.0.26",
+        "@wocker/core": "^1.0.27",
         "@wocker/docker-module": "^0.0.1",
         "jest": "^30.2.0",
         "make-coverage-badge": "^1.2.0",
