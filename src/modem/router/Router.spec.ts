@@ -64,6 +64,7 @@ describe("Router", (): void => {
             });
         });
 
+        // @ts-ignore
         router[method.toLowerCase()](pattern, handler);
 
         const res = await router.exec(method, path, {});
