@@ -3,6 +3,7 @@ import {
     DynamicModule
 } from "@wocker/core";
 import {
+    ComposeService,
     ContainerService,
     DockerService,
     ImageService,
@@ -15,6 +16,7 @@ import {Fixtures} from "./modem";
 
 @Module({
     providers: [
+        ComposeService,
         ContainerService,
         DockerService,
         ImageService,
@@ -22,6 +24,7 @@ import {Fixtures} from "./modem";
         ProtoService
     ],
     exports: [
+        ComposeService,
         ContainerService,
         DockerService,
         ImageService,
@@ -48,6 +51,7 @@ export default class DockerModule {
 
 export {
     FixturesProvider,
+    ComposeService,
     ContainerService,
     DockerService,
     ImageService,
