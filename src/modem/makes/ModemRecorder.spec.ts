@@ -1,5 +1,5 @@
 import {describe, it, beforeEach, afterEach, jest, expect} from "@jest/globals";
-import {FileSystem} from "@wocker/core";
+import {FileSystem, FileSystemDriver} from "@wocker/core";
 import type Docker from "dockerode";
 import {vol} from "memfs";
 import {ModemMock} from "./ModemMock";
@@ -9,7 +9,7 @@ import {Logger} from "@kearisp/cli";
 
 describe("ModemRecorder", (): void => {
     const fs = new FileSystem(`${__dirname}/../../../fixtures`),
-          testFS = new FileSystem("/home/wocker-test"),
+          testFS = new FileSystem("/home/wocker-test", vol as unknown as FileSystemDriver),
           testFixtures = Fixtures.fromFS(testFS);
 
     const followStream = async (stream: NodeJS.ReadableStream, log?: boolean): Promise<void> => {

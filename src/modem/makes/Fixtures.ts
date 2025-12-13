@@ -1,4 +1,4 @@
-import {FileSystem} from "@wocker/core";
+import {FileSystem, FileSystemDriver} from "@wocker/core";
 import {Readable} from "stream";
 
 
@@ -140,9 +140,9 @@ export class Fixtures {
         return new this(fs);
     }
 
-    public static fromPath(path: string): Fixtures {
+    public static fromPath(path: string, driver?: FileSystemDriver): Fixtures {
         return this.fromFS(
-            new FileSystem(path)
+            new FileSystem(path, driver)
         );
     }
 }

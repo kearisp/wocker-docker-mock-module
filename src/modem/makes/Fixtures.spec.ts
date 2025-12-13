@@ -1,12 +1,12 @@
 import {describe, it, beforeEach, expect, jest} from "@jest/globals";
-import {FileSystem} from "@wocker/core";
+import {FileSystem, FileSystemDriver} from "@wocker/core";
 import {Readable, Writable} from "stream";
 import {vol} from "memfs";
 import {Fixtures} from "./Fixtures";
 
 
 describe("Fixtures", (): void => {
-    const testFS = new FileSystem("/home/wocker-test/fixtures"),
+    const testFS = new FileSystem("/home/wocker-test/fixtures", vol as unknown as FileSystemDriver),
           testFixtures = Fixtures.fromPath(testFS.path());
 
     beforeEach((): void => {
