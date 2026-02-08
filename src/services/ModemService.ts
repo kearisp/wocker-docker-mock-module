@@ -1,4 +1,5 @@
 import {
+    ProcessService,
     Injectable,
     LogService
 } from "@wocker/core";
@@ -14,11 +15,12 @@ import {FixturesProvider} from "./FixturesProvider";
 @Injectable("DOCKER_MODEM_SERVICE")
 export class ModemService extends BaseModemService {
     public constructor(
+        processService: ProcessService,
         protoService: ProtoService,
         logService: LogService,
         protected readonly fixturesProvider: FixturesProvider
     ) {
-        super(protoService, logService);
+        super(processService, protoService, logService);
     }
 
     public get modem(): Modem {
