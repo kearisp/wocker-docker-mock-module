@@ -7,7 +7,7 @@ import {
     ProtoService
 } from "@wocker/docker-module";
 import type Modem from "docker-modem";
-import {ModemMock} from "../modem";
+import {ModemMock} from "docker-modem-mock";
 import {FixturesProvider} from "./FixturesProvider";
 
 
