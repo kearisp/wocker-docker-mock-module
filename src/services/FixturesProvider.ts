@@ -1,4 +1,4 @@
-import {Fixtures} from "../modem";
+import {Fixtures} from "docker-modem-mock";
 
 
 export class FixturesProvider {

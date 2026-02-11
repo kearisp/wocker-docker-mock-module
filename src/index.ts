@@ -9,9 +9,9 @@ import {
     ImageService,
     ProtoService
 } from "@wocker/docker-module";
+import {Fixtures} from "docker-modem-mock";
 import {ModemService} from "./services/ModemService";
 import {FixturesProvider} from "./services/FixturesProvider";
-import {Fixtures} from "./modem";
 
 
 @Module({
@@ -59,4 +59,8 @@ export {
     ProtoService
 };
 
-export * from "./modem";
+export {
+    Fixtures,
+    ModemMock,
+    ModemRecorder
+} from "docker-modem-mock";

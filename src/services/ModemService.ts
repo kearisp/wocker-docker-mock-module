@@ -1,4 +1,5 @@
 import {
+    ProcessService,
     Injectable,
     LogService
 } from "@wocker/core";
@@ -7,18 +8,19 @@ import {
     ProtoService
 } from "@wocker/docker-module";
 import type Modem from "docker-modem";
-import {ModemMock} from "../modem";
+import {ModemMock} from "docker-modem-mock";
 import {FixturesProvider} from "./FixturesProvider";
 
 
 @Injectable("DOCKER_MODEM_SERVICE")
 export class ModemService extends BaseModemService {
     public constructor(
+        processService: ProcessService,
         protoService: ProtoService,
         logService: LogService,
         protected readonly fixturesProvider: FixturesProvider
     ) {
-        super(protoService, logService);
+        super(processService, protoService, logService);
     }
 
     public get modem(): Modem {
