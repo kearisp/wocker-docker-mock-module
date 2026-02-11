@@ -27,7 +27,7 @@
         "make-coverage-badge": "make-coverage-badge"
     },
     "dependencies": {
-        "docker-modem-mock": "^0.0.10"
+        "docker-modem-mock": "^0.0.11"
     },
     "peerDependencies": {
         "@wocker/core": "^1.0.27",
