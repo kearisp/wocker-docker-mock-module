@@ -1,7 +1,7 @@
 {
     "name": "@wocker/docker-mock-module",
     "type": "commonjs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Kris Papercut <krispcut@gmail.com>",
     "description": "Docker mock module for wocker",
     "license": "MIT",
@@ -35,7 +35,7 @@
     },
     "devDependencies": {
         "@types/docker-modem": "^3.0.6",
-        "@types/dockerode": "^3.3.44",
+        "@types/dockerode": "^4.0.1",
         "@types/jest": "^30.0.0",
         "@types/node": "^24.8.1",
         "@wocker/core": "^1.0.27",
