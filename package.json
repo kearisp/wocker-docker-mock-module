@@ -1,7 +1,7 @@
 {
     "name": "@wocker/docker-mock-module",
     "type": "commonjs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Kris Papercut <krispcut@gmail.com>",
     "description": "Docker mock module for wocker",
     "license": "MIT",
@@ -27,7 +27,7 @@
         "make-coverage-badge": "make-coverage-badge"
     },
     "dependencies": {
-        "docker-modem-mock": "^0.0.14"
+        "docker-modem-mock": "^0.0.15"
     },
     "peerDependencies": {
         "@wocker/core": "^1.0.31",
@@ -35,7 +35,7 @@
     },
     "devDependencies": {
         "@types/docker-modem": "^3.0.6",
-        "@types/dockerode": "^4.0.1",
+        "@types/dockerode": "^4.0.2",
         "@types/jest": "^30.0.0",
         "@types/node": "^24.8.1",
         "@wocker/core": "^1.0.27",
